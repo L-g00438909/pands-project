@@ -148,7 +148,7 @@ correlation = df.groupby('species').corr()  # correlation matrix for each specie
 print(correlation)
 
 # print correlation to a text file:
-with open('correlation_matrix.txt', 'w') as f:  # with statement to open the file and close it automatically
+with open('Correlation_matrix.txt', 'w') as f:  # with statement to open the file and close it automatically
         print(correlation, file=f)  # print correlation matrix to the txt file. file=f is used to redirect the correlation matrix to the txt file in f
 
 # correlation heatmap:
