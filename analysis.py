@@ -9,6 +9,8 @@ import numpy as np  #array for numerical data
 import matplotlib.pyplot as plt  #plotting library
 import seaborn as sns  #plotting library
 
+
+
 # LOAD THE DATASET:
 df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
@@ -40,6 +42,10 @@ print(df.dtypes)  # print the data types of the columns in the dataset.
 # SUMMARY STATISTICS:
 print('\033[1mSummary statistics of the dataset:\033[0m')
 print(df.describe())  # print summary statistics of the dataset.
+print('\n')
+
+
+
 
 
 with open('summary_irisdata.txt', 'w') as f:  # open a summary text file in write mode to save the information about the dataset.
@@ -64,7 +70,18 @@ with open('summary_irisdata.txt', 'w') as f:  # open a summary text file in writ
       print(df.dtypes, file=f)  
 with open('summary_statistics.txt', 'w') as f:  
       print('Summary statistics of the dataset:', file=f)
-      print(df.describe(), file=f) 
+      print(df.describe(), file=f)
+      print('\n', file=f)
+      print('Summary statistics for Iris Setosa:', file=f)
+      print(df[df['species']=='setosa'].describe(), file=f)
+      print('\n', file=f)
+      print('Summary statistics for Iris Versicolor:', file=f)
+      print(df[df['species']=='versicolor'].describe(), file=f)
+      print('\n', file=f)
+      print('Summary statistics for Iris Virginica:', file=f)
+      print(df[df['species']=='virginica'].describe(), file=f)
+      print('\n', file=f)
+
       
 
 
@@ -74,42 +91,38 @@ with open('summary_statistics.txt', 'w') as f:
 
 # HISTOGRAMS:
 
-# histogram subplots of numerical variables:
-fig, axes = plt.subplots(2, 2, figsize=(10,8))
-fig.suptitle('Histograms of numerical variables', color='darkblue', fontweight='bold', fontsize='15')
-sns.histplot(df, x='sepal_length', hue='species', kde=True, ax=axes[0, 0], palette={'setosa':'blue', 'versicolor':'purple', 'virginica':'magenta'})
-sns.histplot(df, x='sepal_width', hue='species', kde=True, ax=axes[0, 1], palette={'setosa':'blue', 'versicolor':'purple', 'virginica':'magenta'} )
-sns.histplot(df, x='petal_length', hue='species',kde=True, ax=axes[1, 0], palette={'setosa':'blue', 'versicolor':'purple', 'virginica':'magenta'} )
-sns.histplot(df, x='petal_width', hue='species', kde=True, ax=axes[1, 1], palette={'setosa':'blue', 'versicolor':'purple', 'virginica':'magenta'} )
-plt.show()
-
 # histogram of sepal width per species:
 sns.histplot(data=df, x='sepal_width', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
 plt.title('Histogram of Sepal Width by Species')
 plt.xlabel('Sepal Width')
 plt.ylabel('Frequency')
-plt.show()
+plt.savefig('histogram_sepal_width.png')
+plt.close()
 
 # histogram of sepal length per species:
 sns.histplot(data=df, x='sepal_length', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
 plt.title('Histogram of Sepal Length by Species')
 plt.xlabel('Sepal Length')
 plt.ylabel('Frequency')
-plt.show()
+plt.savefig('histogram_sepal_length.png')
+plt.close()
 
 # histogram of petal width per species:
 sns.histplot(data=df, x='petal_width', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
 plt.title('Histogram of Petal Width by Species')
 plt.xlabel('Petal Width')
 plt.ylabel('Frequency')
-plt.show()
+plt.savefig('histogram_petal_width.png')
+plt.close()
 
 # histogram of petal length per species:
 sns.histplot(data=df, x='petal_length', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
 plt.title('Histogram of Petal Length by Species')
 plt.xlabel('Petal Length')
 plt.ylabel('Frequency')
-plt.show()
+plt.savefig('histogram_petal_length.png')
+plt.close()
+
 
 
 # BOXPLOTS:
@@ -120,16 +133,15 @@ sns.boxplot(data=df, x='species', y='sepal_length', ax=ax[0, 0], hue='species', 
 sns.boxplot(data=df, x='species', y='sepal_width', ax=ax[0, 1], hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
 sns.boxplot(data=df, x='species', y='petal_length', ax=ax[1, 0], hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
 sns.boxplot(data=df, x='species', y='petal_width', ax=ax[1, 1], hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
-plt.legend()
-plt.show()
-
+plt.savefig('boxplots.png')
+plt.close()
 
 # PAIRPLOT:
 
 # pairplot of the dataset:
 sns.pairplot(df, hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} , diag_kind='kde')
-plt.show()
-
+plt.savefig('pairplot.png')
+plt.close()
  
 # SCATTERPLOTS:
 
@@ -137,20 +149,21 @@ plt.show()
 sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
 plt.ylabel('Sepal Width')
 plt.title('Sepal Length vs Sepal Width')
-plt.show()
+plt.savefig('scatterplot_sepal.png')
+plt.close()
 
 # scatterplot of petal length vs petal width per species with regression line:
 sns.lmplot(x='petal_length', y='petal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
 plt.xlabel('Petal Length')
 plt.ylabel('Petal Width')
 plt.title('Petal Length vs Petal Width')
-
-plt.show()
-
+plt.savefig('scatterplot_petal.png')
+plt.close()
 
 # CORRELATION:
 
 # correlation matrix of the dataset:
+print('\033[1mCorrelation matrix of the dataset:\033[0m')
 correlation = df.groupby('species').corr()  # correlation matrix for each species in the dataset.
 print(correlation)
 
@@ -165,5 +178,5 @@ correlation =df[numerical_variables].corr()
 sns.heatmap(correlation, annot=True, cmap='viridis')
 plt.title('Correlation Heatmap of Numerical Variables', color='darkblue')
 plt.savefig('correlation_heatmap.png')
+plt.close()
 
-plt.show()

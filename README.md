@@ -14,4 +14,25 @@ The Iris dataset consists of 150 samples of three species of Iris flowers. 50 sa
 
 
 
-<img src="https://media.licdn.com/dms/image/D4D12AQH-T205O9k22g/article-inline_image-shrink_1000_1488/0/1694100871364?e=2147483647&v=beta&t=D3kWufrXHt34EA9NORP4qMsSOR42BNvA1H4e-UjvE3k">
+<img src="https://media.licdn.com/dms/image/D4D12AQH-T205O9k22g/article-inline_image-shrink_1000_1488/0/1694100871364?e=2147483647&v=beta&t=D3kWufrXHt34EA9NORP4qMsSOR42BNvA1H4e-UjvE3k" width=550 height=300>
+
+
+# About the dataset:
+***
+
+# Summary Statistics:
+***
+
+# Data Visualisation:
+***
+
+<p float='left'>
+<img src="histogram_sepal_width.png" height=400 width=400>
+<img src='histogram_sepal_length.png' height=400 width=400>
+</p>
+
+
+<p float='left'>
+<img src='histogram_petal_width.png' height=400 width=400>
+<img src='histogram_petal_length.png' height=400, width=400>
+</p>
