@@ -42,7 +42,7 @@ print('\033[1mSummary statistics of the dataset:\033[0m')
 print(df.describe())  # print summary statistics of the dataset.
 
 
-with open('Iris_summary.txt', 'w') as f:  # open a summary text file in write mode to save the information about the dataset.
+with open('summary_irisdata.txt', 'w') as f:  # open a summary text file in write mode to save the information about the dataset.
       print('INFORMATION ABOUT THE IRIS DATASET:', file=f)
       print('_'*70, file=f)
       print('Number of rows and columns in the dataset:', file=f)  
@@ -62,7 +62,7 @@ with open('Iris_summary.txt', 'w') as f:  # open a summary text file in write mo
       print('_'*70, file=f)
       print('Data types of the columns in the dataset:', file=f)  
       print(df.dtypes, file=f)  
-with open('Summary_statistics.txt', 'w') as f:  
+with open('summary_statistics.txt', 'w') as f:  
       print('Summary statistics of the dataset:', file=f)
       print(df.describe(), file=f) 
       
