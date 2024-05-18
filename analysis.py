@@ -43,22 +43,29 @@ print(df.describe())  # print summary statistics of the dataset.
 
 
 with open('Iris_summary.txt', 'w') as f:  # open a summary text file in write mode to save the information about the dataset.
-      print('INFORMATION ABOUT THE IRIS DATASET:', file=f) 
+      print('INFORMATION ABOUT THE IRIS DATASET:', file=f)
+      print('_'*70, file=f)
       print('Number of rows and columns in the dataset:', file=f)  
       print(df.shape, file=f)   
+      print('_'*70, file=f)
       print('First 5 rows of the dataset:', file=f)  
       print(df.head(), file=f)  
+      print('_'*70, file=f)
       print('Last 5 rows of the dataset:', file=f)  
-      print(df.tail(), file=f)  # print last 5 rows.
+      print(df.tail(), file=f) 
+      print('_'*70, file=f)
       print('Number of each species in the dataset:', file=f)  
       print(df['species'].value_counts(), file=f)  
+      print('_'*70, file=f)
       print('Number of missing values in the dataset:', file=f) 
       print(df.isnull().sum(), file=f)  
+      print('_'*70, file=f)
       print('Data types of the columns in the dataset:', file=f)  
       print(df.dtypes, file=f)  
 with open('Summary_statistics.txt', 'w') as f:  
       print('Summary statistics of the dataset:', file=f)
-      print(df.describe(), file=f)  
+      print(df.describe(), file=f) 
+      
 
 
 
@@ -148,7 +155,7 @@ correlation = df.groupby('species').corr()  # correlation matrix for each specie
 print(correlation)
 
 # print correlation to a text file:
-with open('Correlation_matrix.txt', 'w') as f:  # with statement to open the file and close it automatically
+with open('correlation_matrix.txt', 'w') as f:  # with statement to open the file and close it automatically
         print(correlation, file=f)  # print correlation matrix to the txt file. file=f is used to redirect the correlation matrix to the txt file in f
 
 # correlation heatmap:
