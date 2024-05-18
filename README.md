@@ -27,8 +27,27 @@ The Iris dataset consists of 150 samples of three species of Iris flowers. 50 sa
 
 The describe() function in pandas generates descriptive statistics of the dataFrame giving a summary of the central tendency, dispersion and shape of the distribution of the dataset. 
 
-Observations: 
+Sepal Length: 
+-   The mean and median are close indicating a symmetric distribution
+-   the standard deviation of 0.83 indicates low variability. 
+
+
+Sepal Width:
+-   the mean 3.06cm and median 3.00cm are close showing symmetric distribution, with an even lower standard deviation of 0.44 showing low variability. 
+
+
+Petal Length:
+-   The mean of 3.76 is significantly lower than the median of 4.35 indicating a left skewed distribution. 
+-   A higher standard deviation of 1.76 indicates a higher variability among the data points. 
+
 -   
+
+Petal Width: 
+-   The mean of 1.2 is slightly lower than the median of 1.3 which could indicate a slightly left skew. 
+-   A standard deviation of 0.76 is low
+
+
+
 
 # Data Visualisation:
 ***
