@@ -92,34 +92,34 @@ with open('summary_statistics.txt', 'w') as f:
 # HISTOGRAMS:
 
 # histogram of sepal width per species:
-sns.histplot(data=df, x='sepal_width', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.title('Histogram of Sepal Width by Species')
-plt.xlabel('Sepal Width')
-plt.ylabel('Frequency')
+sns.histplot(data=df, x='sepal_width', hue='species', multiple='stack', kde=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
+plt.title('Histogram of Sepal Width by Species', color='darkblue', fontsize=15, fontweight='bold')
+plt.xlabel('Sepal Width (cm)', fontsize=12, fontweight='bold')
+plt.ylabel('Frequency', fontsize=12, fontweight='bold')
 plt.savefig('histogram_sepal_width.png')
 plt.close()
 
 # histogram of sepal length per species:
-sns.histplot(data=df, x='sepal_length', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.title('Histogram of Sepal Length by Species')
-plt.xlabel('Sepal Length')
-plt.ylabel('Frequency')
+sns.histplot(data=df, x='sepal_length', hue='species', multiple='stack', kde=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
+plt.title('Histogram of Sepal Length by Species', color='darkblue', fontsize=15, fontweight='bold')
+plt.xlabel('Sepal Length (cm)', fontsize=12, fontweight='bold')
+plt.ylabel('Frequency', fontsize=12, fontweight='bold')
 plt.savefig('histogram_sepal_length.png')
 plt.close()
 
 # histogram of petal width per species:
-sns.histplot(data=df, x='petal_width', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.title('Histogram of Petal Width by Species')
-plt.xlabel('Petal Width')
-plt.ylabel('Frequency')
+sns.histplot(data=df, x='petal_width', hue='species', multiple='stack', kde=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
+plt.title('Histogram of Petal Width by Species', color='darkblue', fontsize=15, fontweight='bold')
+plt.xlabel('Petal Width (cm)', fontsize=12, fontweight='bold')
+plt.ylabel('Frequency', fontsize=12, fontweight='bold')
 plt.savefig('histogram_petal_width.png')
 plt.close()
 
 # histogram of petal length per species:
-sns.histplot(data=df, x='petal_length', hue='species', multiple='stack', kde=False, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.title('Histogram of Petal Length by Species')
-plt.xlabel('Petal Length')
-plt.ylabel('Frequency')
+sns.histplot(data=df, x='petal_length', hue='species', multiple='stack', kde=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
+plt.title('Histogram of Petal Length by Species', color='darkblue', fontsize=15, fontweight='bold')
+plt.xlabel('Petal Length (cm)', fontsize=12, fontweight='bold')
+plt.ylabel('Frequency', fontsize=12, fontweight='bold')
 plt.savefig('histogram_petal_length.png')
 plt.close()
 
@@ -147,16 +147,17 @@ plt.close()
 
 # scatterplot of sepal length vs sepal width per species with regression line:
 sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.ylabel('Sepal Width')
-plt.title('Sepal Length vs Sepal Width')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Sepal Width (cm)')
+plt.title('Sepal Length vs Sepal Width', color='darkblue', fontsize=15, fontweight='bold')
 plt.savefig('scatterplot_sepal.png')
 plt.close()
 
 # scatterplot of petal length vs petal width per species with regression line:
 sns.lmplot(x='petal_length', y='petal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
-plt.xlabel('Petal Length')
-plt.ylabel('Petal Width')
-plt.title('Petal Length vs Petal Width')
+plt.xlabel('Petal Length (cm)', fontsize=12, fontweight='bold')
+plt.ylabel('Petal Width (cm)', fontsize=12, fontweight='bold')
+plt.title('Petal Length vs Petal Width', color='darkblue', fontsize=15, fontweight='bold')
 plt.savefig('scatterplot_petal.png')
 plt.close()
 
