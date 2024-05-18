@@ -23,6 +23,13 @@ The Iris dataset consists of 150 samples of three species of Iris flowers. 50 sa
 # Summary Statistics:
 ***
 
+<img src='stats_iris.png' height=300 width=400>
+
+The describe() function in pandas generates descriptive statistics of the dataFrame giving a summary of the central tendency, dispersion and shape of the distribution of the dataset. 
+
+Observations: 
+-   
+
 # Data Visualisation:
 ***
 

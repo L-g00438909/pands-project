@@ -84,8 +84,18 @@ with open('summary_statistics.txt', 'w') as f:
 
       
 
+# DATA VISUALIZATION:
 
 
+# BARCHART: 
+
+# Barchart of species count in the dataset:
+sns.countplot(data=df, x='species', hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
+plt.title('Species Count', color='darkblue', fontsize=15, fontweight='bold')
+plt.xlabel('Species', fontsize=12, fontweight='bold')
+plt.ylabel('Count', fontsize=12, fontweight='bold')
+plt.savefig('species_count.png')
+plt.close()
 
 
 
