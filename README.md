@@ -55,7 +55,7 @@ The [Iris dataset]('https://raw.githubusercontent.com/mwaskom/seaborn-data/maste
 
 After loading the dataset, the structure and content of the data set was analysed by various steps. The first and last 5 rows were displayed to get an idea of what the data looks like and the information that it contains. The shape of the data set was looked at. This includes the number of rows and columns of the data to see the size of the dataset. The Iris dataset has 150 rows and 5 columns. Each row represents an observation of a flower each columns representing a variable. The first four columns are of type float64 which represents continuous numerical measurements such as petal and sepal lengths and widths, while the species column is of type int64 representing categorical data. The value counts of the target variable of species was looked at to check how many samples of each class of species was present. There was an equal number of 50 samples for each of the species showing that the dataset is balanced.   
 The dataset was checked for missing values using df.isnull(). There was no missing values within the dataset. 
-The summary of the dataset was sent to a txt file. 
+The summary of the dataset was sent to a text file. 
 
 ### 5. Summary Statistics:
 ***
