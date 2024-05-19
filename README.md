@@ -84,7 +84,7 @@ Petal Width:
 
 ### 6. Data Visualisation:
 ***
-Histograms show the distribution of numerical data by grouping data points that lie within a range of values in to a bin. The higher the bar the greater the frequency of values.
+[Histograms]('https://www.w3schools.com/statistics/statistics_histograms.php') show the distribution of numerical data by grouping data points that lie within a range of values in to a bin. The higher the bar the greater the frequency of values.
 
 
 <p float='left'>
@@ -98,6 +98,8 @@ Histograms show the distribution of numerical data by grouping data points that 
 <img src='histogram_petal_length.png' height=400, width=400>
 </p>
 
+Observations:
+
 From the above histograms it can be seen that there is overlap between all species for sepal width and sepal length. 
 
 Iris setosa is clearly distinguishable from Iris Versicolor and Iris Virginica in petal width and petal length with Iris setosa having the smaller petal lengths and widths and is seen to be clustered at the lower end of the histogram. There is overlap seen between Iris Virginica and Iris Versicolor. 
@@ -107,9 +109,31 @@ The higher standard deviation obtained for petal length is more than likely due 
 While petal width had a lower standard deviation than petal length it can be seen that Iris Setosa forms a distinct cluster at the lower end of the histogram separate from Iris Versicolor and Iris Virginica. The mean petal width of Iris Setosa of 0.25cm is significantly lower than that of Iris Versicolor with a mean of 1.33cm and Iris Virginica with a mean of 2.03cm. 
 
 
+***
+
+[Boxplots](https://www.w3schools.com/statistics/statistics_box_plots.php) show the distribution of data by displaying the minimum and maximum value, the first Quartile (25%: the lower part of the box), third quartile (75%: the upper area of the box), the median (50%: represented by a line inside the box). Boxplots give a visual summary of the data distribution and the presence of skewness/outliers. 
 
 
-#### Correlation:
 
+<img src='boxplots.png' width=800 height=800>
+Observations:
+
+***
+
+
+
+A [Pairplot]('https://www.geeksforgeeks.org/python-seaborn-pairplot-method/') is used to see if there is any relationships between two variables. 
+The plots are in a scatterplot matrix format where the row name represents the x-axis and column name represents the y-axis. The main diagonal subplots are the histogram distributions for each variable. 
 
 <img src='pairplot.png' height=500 width=600>
+
+
+Observations:
+
+***
+
+A [Heatmap]('https://seaborn.pydata.org/generated/seaborn.heatmap.html') is used to visualise correlations between variables. 
+
+<img src='correlation_heatmap.png' height=600 width=600>
+
+<img src='scatterplot_petal.png' height=500 width=500>kiloi,
