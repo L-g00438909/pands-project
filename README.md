@@ -12,15 +12,22 @@
 # <div align="leftcenter">Analysis of the Iris Dataset</div></b>
 
 ***
+
+### Aim: 
+
+The objective of this project is to analyse the Fishers Iris dataset using Python. Python libraries such as Pandas, Numpy, Matplotlib etc. are used to explore the data  and generate descriptive statistics, data visualisations to demonstrate trends and relationships within the dataset. 
+
+
 ### Background:
 
 The Iris dataset is a multivariate dataset consisting of 50 samples from three species of the Iris flower. Iris Setosa, Iris Versicolor and Iris Virginica. The length and width of the sepals and petals of the flowers were measured to assess the variation in Iris flowers of the three related species. 
 
+
+<img src="https://media.licdn.com/dms/image/D4D12AQH-T205O9k22g/article-inline_image-shrink_1000_1488/0/1694100871364?e=2147483647&v=beta&t=D3kWufrXHt34EA9NORP4qMsSOR42BNvA1H4e-UjvE3k" width=500 height=200>
+
 The Iris data set was first used by Ronald A. Fisher in 1936 to demonstrate how linear discriminant analysis can be applied to classify data in different categories (species) based on the measurements of the flower features. 
 Fisher is said to have created the foundations for modern statistical science. 
 
-
-<img src="https://media.licdn.com/dms/image/D4D12AQH-T205O9k22g/article-inline_image-shrink_1000_1488/0/1694100871364?e=2147483647&v=beta&t=D3kWufrXHt34EA9NORP4qMsSOR42BNvA1H4e-UjvE3k" width=500 height=200>
 
 
 
