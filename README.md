@@ -129,7 +129,7 @@ While petal width had less skewedness and a lower standard deviation than petal 
 <img src='boxplots.png' width=800 height=800>
 
 **Main Observations:**
-The boxplots show that the Iris Setosa has the lowest measurements for sepal length, petal length and petal length and the highest measurement for sepal width. Overlapping is seen between all species in sepal length and width with more overlapping observed for Iris Virginica and Iris Versicolor. Iris Setosa is significantly separated from the other two species in both petal length and petal width, with Iris Virginica and Iris Versicolor showing overlap.
+The boxplots show that Iris Setosa has the lowest measurements for sepal length, petal length and petal width and the highest measurement for sepal width. Overlapping is seen between all species in sepal length and width with more overlapping observed for Iris Virginica and Iris Versicolor. Iris Setosa is significantly separated from the other two species in both petal length and petal width, with Iris Virginica and Iris Versicolor showing overlap.
 From the boxplots, outliers can be seen across certain species and features with Iris Setosa having a higher amount of outliers for petal width and length than Iris Versicolor and Iris Virginica. While the separation between Iris Setosa and the other variables appears to be large, its still important to deal with outliers to ensure the integrity of the data. Due to the large separation observed, outliers might not significantly affect the overall separation but could impact specific analysis or models. For the purposes of this study, outliers are not removed as the objectives of the study to visualise the data for any trends or relationships are still met. 
 
 
@@ -160,14 +160,37 @@ A [Heatmap]('https://seaborn.pydata.org/generated/seaborn.heatmap.html') is used
 
 [Correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) coefficients indicate the strength and direction of the linear relationship between the variables. Positive correlation indicates that as one variable increases the other variable tends to increase also. 
 
-A correlation of 0.96 is seen for petal length vs petal width. This is a near perfect positive correlation that is close to 1 between the variables. This means that as petal length increases petal width increases also. These features are very closely related, by knowing the petal length it would allow you to predict the petal width with a high degree of accuracy. 
+A correlation of 0.96 is seen for petal length vs petal width. This is a near perfect positive correlation that is close to 1 between the variables. The closer a value is to 1 the higher the correlation. This means that as petal length increases petal width increases also. These features are very closely related, by knowing the petal length it would allow you to predict the petal width with a high degree of accuracy. 
+
 In addition, there is a very strong positive correlation between sepal length and petal length at 0.87 which indicates that as the sepal length increases the petal length also tends to increase. Although the relationship is not as strong as between petal length and petal width there is a significant linear relationship between the variables. 
 There is also a strong positive correlation between sepal length and petal width at 0.82 which sugests that there is a significant linear relationship between sepal length and petal width. 
 
 
+Scatterplots are used to identify correlations between two variables.
 
-The high correlation of 0.96 for petal length vs petal width indicates a strong linear relationship between these features. 
+<img src='scatterplot_petal.png' height=500 width=600>
 
- Sepal length has a strong correlation with both petal length and petal width meaning it could be useful as a predictor for these petal measurements. The strong correlations indicate that changes in sepal lengths are associated with changes in petal length and petal width, Therefore a model using sepal length as a predictor is likely to have good accuracy, although accuracy would not be 100% due to the correlations not being exactly at 1.0, it could still be used as an estimate for petal length and petal width. 
+
+
+ The plot shows a cluster on the bottom right which is likely to be Iris Setosa based on the earlier analysis of the data. Iris Setosa was shown to have smaller petal lengths and petal widths. A scatterplot separated based on species would help to confirm this. The other data points appear more clustered together with indicating that they are likely Iris Versicolor and Iris Virginica. The line goes directly through all the data points from left to right showing a clear linear relationship and strong positive correlation between petal length and petal width across all species. The strong positive correlation of 0.96 confirms this. The slope of the line is 0.42 which means that for every 1cm increase in petal length the petal width increases by approximately 0.42cm. 
+
+
+
+ <img src='scatterplot_petal_species.png' height=500 width=600>
+
+When separated based on species, the blue cluster at the bottom right is confirmed to be Iris Setosa, due to Iris Setosa having smaller petal lengths and widths. The distinct separation is consistent with earlier observations of Iris Setosa. The pink and purple clusters overlap for Iris Virginica and Iris Versicolor indicating that these species have more similar petal measurements. This overlap can make it challenging to distingush between them based on petal measurements alone. 
+
+
+### Conclusion:
+
+
+
+The analysis shows that Iris Setosa is linearly separable from Iris Versicolor and Iris Virginica with no overlap observed in its petal length and petal width. This clear separation makes it easily distinguishable from Iris Versicolor and Iris Virginica which show more overlap. Iris Setosa also appears to have less overlap in sepal measurements than Iris Virginica and Iris Versicolor which contributes to its sepearation from the other species.  
+The high correlation of 0.96 for petal length vs petal width indicates a near perfect linear relationship between these features which suggests that they are closely related and changes in petal length would indicate changes in petal width. The strong linear relationship between these features suggest they could be used in predictive models. In addition, sepal length shows strong correlations with both petal length and petal width suggesting that predictive models using these features may be effective. 
+
+
+#### References:
+
+
 ***
 <

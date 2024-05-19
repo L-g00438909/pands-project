@@ -89,17 +89,6 @@ with open('summary_statistics.txt', 'w') as f:
 # DATA VISUALIZATION:
 
 
-# BARCHART: 
-
-# Barchart of species count in the dataset:
-sns.countplot(data=df, x='species', hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.title('Species Count', color='darkblue', fontsize=15, fontweight='bold')
-plt.xlabel('Species', fontsize=12, fontweight='bold')
-plt.ylabel('Count', fontsize=12, fontweight='bold')
-plt.savefig('species_count.png')
-plt.close()
-
-
 
 # HISTOGRAMS:
 
@@ -148,17 +137,17 @@ sns.boxplot(data=df, x='species', y='petal_width', ax=ax[1, 1], hue='species', p
 plt.savefig('boxplots.png')
 plt.close()
 
-# PAIRPLOT:
+
+# CORRELATION PLOTS:
+
 
 # pairplot of the dataset:
 sns.pairplot(df, hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} , diag_kind='kde')
 plt.savefig('pairplot.png')
 plt.close()
  
-# SCATTERPLOT:
 
 # Petal length vs Petal width scatterplot with regression line:
-
 petal_length = df['petal_length'] # petal length
 print(petal_length)
 print(type(petal_length))
@@ -168,6 +157,7 @@ petal_width = df['petal_width'].to_numpy()  # convert petal width to numpy array
 print(petal_width)
 
 m, c = np.polyfit(petal_length, petal_width, 1)  # linear regression line
+print('\033[1mSlope and Intercept:\033[0m')
 print(m, c)
 
 fig, ax = plt.subplots()
@@ -176,12 +166,22 @@ ax.plot(petal_length, m*petal_length + c, 'r-')
 ax.set_xlabel('Petal Length (cm)')
 ax.set_ylabel('Petal Width (cm)')
 ax.set_title('Petal Length vs Petal Width')
+plt.text(3, 2, f'y={m:.2f}x+{c:.2f}', color='red', fontsize=10)
 plt.savefig('scatterplot_petal.png')
 plt.close()
 
 
+# scatterplot of petal length vs petal width per species with regression line:
+sns.lmplot(x='petal_length', y='petal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
+plt.xlabel('Petal Length (cm)', color='darkblue')
+plt.ylabel('Petal Width (cm)', color='darkblue')
+plt.title('Petal Length vs Petal Width', color='darkblue')
+plt.savefig('scatterplot_petal_species.png')
+plt.close()
 
-# CORRELATION:
+
+
+
 
 # correlation matrix of the dataset:
 print('\033[1mCorrelation matrix of the dataset:\033[0m')
