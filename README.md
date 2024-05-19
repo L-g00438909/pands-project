@@ -184,14 +184,14 @@ When separated based on species, the blue cluster at the bottom right is confirm
 
 <img src='scatterplot_sepal.png' height=500 width=600>
 
-The scatterplot for sepal length vs sepal width shows a negative linear relationship between the two variables. The data points are more dispersed in comparison to the scatterplot for petal length vs petal width. The correlation coefficient of -0.37 confirms this. Due to the dspersion of the data points it is difficult to determine the species. The negative slope of -0.06 further shows the weak relationship. The changes in sepal width relative to sepal length is minimal. Therefore sepal length is not a strong predictor of sepal width in the dataset. 
+The scatterplot for sepal length vs sepal width shows a negative linear relationship between the two variables. The correlation coefficient of -0.37 confirms this. The data points are more dispersed in comparison to the scatterplot for petal length vs petal width. Due to the dispersion of the data points it is difficult to determine the species. The negative slope of -0.06 further shows the weak relationship. The changes in sepal width relative to sepal length is minimal. Therefore sepal length is not a strong predictor of sepal width in the dataset. 
 
 **Sepal Length vs Sepal Width per species:**
 
 <img src='scatterplot_sepal_species.png' height=500 width=600>
 
 
-When separated based on species, the relationships between sepal length and width appear to have a positive linear relationship with an upwards facing line.  While the overall dataset shows a weak negative correlation, the individual species have stronger positive relationships. The datapoints are however more dispersed from the line than seen in petal length vs petal width. Also, there is significant overlap between the Iris Virginica and Iris Setosa in comparison to petal length vs petal width, while there is still overlap they are more separated in petal length vs petal width. While there is overlap of sepal lengths, Iris setosa is distinguishable from Iris Virginica and Iris Versicolor due to having larger sepal widths, however the separation is not as significant as in petal length vs petal width. 
+When separated based on species, the relationships between sepal length and width appear to have a positive linear relationship with an upwards facing line.  While the overall dataset shows a weak negative correlation, the individual species have stronger positive relationships. The datapoints are however more dispersed from the line than seen in petal length vs petal width. Also, there is significant overlap between the Iris Virginica and Iris Setosa in comparison to petal length vs petal width, while there is still overlap they are more separated in petal length vs petal width. While there is some similarity of sepal lengths, Iris setosa is distinguishable from Iris Virginica and Iris Versicolor due to having larger sepal widths, however the separation is not as significant as in petal length vs petal width. 
 ***
 
 ### Conclusion:
