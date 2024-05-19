@@ -38,7 +38,8 @@ The Iris dataset is a multivariate dataset consisting of 50 samples from three s
 
 ###    1. Import libraries:
 
-[Pandas]('https://pandas.pydata.org/docs/user_guide/10min.html') is a python library for data manipulation and analysis built on top of Numpy.It is used for the dataFrame datastructure.A dataframe is a 2D labelled data structure with columns of different data types, similar to a spreadsheet where each column represents a variable and each row represents an observation.
+[Pandas]('https://pandas.pydata.org/docs/user_guide/10min.html') is a python library for data manipulation and analysis built on top of Numpy.It is used for the dataFrame datastructure. 
+A dataframe is a 2D labelled data structure with columns of different data types, similar to a spreadsheet where each column represents a variable and each row represents an observation.
 
 [Numpy]('https://numpy.org/doc/stable/user/whatisnumpy.html') is a powerful library for the numerical computing of Python.
 
@@ -130,10 +131,20 @@ The plots are in a scatterplot matrix format where the row name represents the x
 
 Observations:
 
+
 ***
 
 A [Heatmap]('https://seaborn.pydata.org/generated/seaborn.heatmap.html') is used to visualise correlations between variables. 
 
 <img src='correlation_heatmap.png' height=600 width=600>
 
-<img src='scatterplot_petal.png' height=500 width=500>kiloi,
+
+Observations: 
+
+[Correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) coefficients indicate the strength and direction of the linear relationship between the variables. Positive correlation indicates that as one variable increases the other variable tends to increase also. 
+A correlation of 0.96 is seen for petal length vs petal width. This is a strong positive correlation that is close to 1 between the variables. This means that as petal length increases petal width increases also. 
+
+***
+<img src='scatterplot_sepal.png' height=500 width=500>
+
+<img src='scatterplot_petal.png' height=500 width=500>

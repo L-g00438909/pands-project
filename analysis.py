@@ -157,9 +157,9 @@ plt.close()
 
 # scatterplot of sepal length vs sepal width per species with regression line:
 sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.xlabel('Sepal Length (cm)')
-plt.ylabel('Sepal Width (cm)')
-plt.title('Sepal Length vs Sepal Width', color='darkblue', fontsize=15, fontweight='bold')
+plt.xlabel('Sepal Length (cm)', color='black', fontsize=12, fontweight='bold')
+plt.ylabel('Sepal Width (cm)', color='black', fontsize=12, fontweight='bold')
+plt.title('Sepal Length vs Sepal Width', color='black', fontsize=12, fontweight='bold')
 plt.savefig('scatterplot_sepal.png')
 plt.close()
 
@@ -167,7 +167,7 @@ plt.close()
 sns.lmplot(x='petal_length', y='petal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
 plt.xlabel('Petal Length (cm)', fontsize=12, fontweight='bold')
 plt.ylabel('Petal Width (cm)', fontsize=12, fontweight='bold')
-plt.title('Petal Length vs Petal Width', color='darkblue', fontsize=15, fontweight='bold')
+plt.title('Petal Length vs Petal Width', color='black', fontsize=12, fontweight='bold')
 plt.savefig('scatterplot_petal.png')
 plt.close()
 
