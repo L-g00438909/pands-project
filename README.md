@@ -214,6 +214,12 @@ https://seaborn.pydata.org/
 
 https://www.datacamp.com/cheat-sheet/matplotlib-cheat-sheet-plotting-in-python
 
+https://www.kodeclik.com/how-to-bold-text-in-python/
+
+https://www.tutorialspoint.com/how-to-put-text-outside-python-plots
+
+https://www.geeksforgeeks.org/writing-to-file-in-python/
+
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
 https://www.datacamp.com/cheat-sheet/matplotlib-cheat-sheet-plotting-in-python

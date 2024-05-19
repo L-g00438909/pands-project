@@ -1,12 +1,11 @@
 # analysis.py
-# Date: 19-05-2024
-# Author: Louise Ryan
-
-# Analysis of the Iris dataset using Python libraries: pandas, numpy, matplotlib, seaborn
+# This program analyzes the Iris dataset using Python libraries: pandas, numpy, matplotlib, seaborn.
 # The dataset contains 150 rows and 5 columns. The columns are: sepal_length, sepal_width, petal_length, petal_width, species.
 # The dataset contains 3 species of iris flowers: setosa, versicolor, virginica.
 # The analysis includes: information about the dataset, summary statistics, histograms, boxplots, pairplot, scatterplots, correlation matrix, correlation heatmap.
 # The analysis is saved to text files and images.
+# Author: Louise Ryan
+
 
 
 
@@ -21,7 +20,7 @@ import seaborn as sns  #plotting library
 # LOAD THE DATASET:
 df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
-# INFORMATION ABOUT THE DATASET:
+# EXAMINE THE DATASET:
 
 print('\033[1mINFORMATION ABOUT THE IRIS DATASET:\033[0m')
 print('\n')
@@ -92,9 +91,6 @@ with open('summary_statistics.txt', 'w') as f:
       print('\n', file=f)
 
       
-
-# DATA VISUALIZATION:
-
 
 
 # HISTOGRAMS:
@@ -177,14 +173,6 @@ ax.set_title('Sepal Length vs Sepal Width')
 plt.text(5, 4, f'y={m:.2f}x+{c:.2f}', color='red', fontsize=10)
 plt.savefig('scatterplot_sepal.png')
 plt.close()
-
-
-
-
-# scatterplot of sepal length vs sepal width per species:
-
-# Rename columns for convenience
-df.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
 
 # Sepal length vs Sepal width scatterplot with regression line:
 sepal_length = df['sepal_length']  # sepal length
