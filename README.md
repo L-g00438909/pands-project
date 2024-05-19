@@ -43,20 +43,19 @@ A dataframe is a 2D labelled data structure with columns of different data types
 
 [Numpy]('https://numpy.org/doc/stable/user/whatisnumpy.html') is a powerful library for the numerical computing of Python.
 
-[Matplotlib]('https://www.w3schools.com/python/matplotlib_intro.asp) is a graph plotting library in Python.
+[Matplotlib]('https://www.w3schools.com/python/matplotlib_intro.asp') is a graph plotting library in Python.
 
-[Seaborn]('https://www.w3schools.com/python/numpy/numpy_random_seaborn.asp) is a library that uses Matplotlb underneath to plot graphs. 
+[Seaborn]('https://www.w3schools.com/python/numpy/numpy_random_seaborn.asp') is a library that uses Matplotlb underneath to plot graphs. 
 
 ###    2. Load the dataset:
 
 The [Iris dataset]('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv') was loaded from the .csv file obtained from the seaborn github repository into a dataFrame using Pandas. 
 
-###    3. Exploratory data analysis:
+###    3. Examining the dataset:
 
-###    4. Data cleaning: 
-
+After loading the dataset, the structure and content of the data set was analysed by various steps. The first and last 5 rows were displayed to get an idea of what the data looks like and the information that it contains. The shape of the data set was looked at. This includes the number of rows and columns of the data to see the size of the dataset. The Iris dataset has 150 rows and 5 columns. Each row represents an observation of a flower each columns representing a variable. The first four columns are of type float64 which represents continuous numerical measurements such as petal and sepal lengths and widths, while the species column is of type int64 representing categorical data. The value counts of the target variable of species was looked at to check how many samples of each class of species was present. There was an equal number of 50 samples for each of the species showing that the dataset is balanced.   
 The dataset was checked for missing values using df.isnull(). There was no missing values within the dataset. 
-
+The summary of the dataset was sent to a txt file. 
 
 ### 5. Summary Statistics:
 ***
@@ -112,7 +111,7 @@ While petal width had a lower standard deviation than petal length it can be see
 
 ***
 
-[Boxplots](https://www.w3schools.com/statistics/statistics_box_plots.php) show the distribution of data by displaying the minimum and maximum value, the first Quartile (25%: the lower part of the box), third quartile (75%: the upper area of the box), the median (50%: represented by a line inside the box). Boxplots give a visual summary of the data distribution and the presence of skewness/outliers. 
+[Boxplots]('https://www.w3schools.com/statistics/statistics_box_plots.php') show the distribution of data by displaying the minimum and maximum value, the first Quartile (25%: the lower part of the box), third quartile (75%: the upper area of the box), the median (50%: represented by a line inside the box). Boxplots give a visual summary of the data distribution and the presence of skewness/outliers. 
 
 
 
