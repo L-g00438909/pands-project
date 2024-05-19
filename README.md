@@ -63,10 +63,16 @@ Histograms show the distribution of numerical data by grouping data points that 
 
 From the above histograms it can be seen that there is overlap between all species for sepal width and sepal length. 
 
-Iris setosa is clearly distingushable from Iris Versicolor and Iris Virginica in petal width and petal length with Iris setosa having the smaller petal lengths and widths and are clustered at the lower end of the histogram. There is overlap seen between Iris Virginica and Iris Versicolor. 
+Iris setosa is clearly distinguishable from Iris Versicolor and Iris Virginica in petal width and petal length with Iris setosa having the smaller petal lengths and widths and is seen to be clustered at the lower end of the histogram. There is overlap seen between Iris Virginica and Iris Versicolor. 
 
 The higher standard deviation obtained for petal length is more than likely due to the significant difference between the species in petal length. Iris setosa has a mean petal length of 1.46cm in comparison to Iris Versicolor with a mean of 4.26cm and Iris Virginica with a mean of 5.55cm. 
 
 While petal width had a lower standard deviation than petal length it can be seen that Iris Setosa forms a distinct cluster at the lower end of the histogram separate from Iris Versicolor and Iris Virginica. The mean petal width of Iris Setosa of 0.25cm is significantly lower than that of Iris Versicolor with a mean of 1.33cm and Iris Virginica with a mean of 2.03cm. 
 
 
+
+
+#### Correlation:
+
+
+<img src='pairplot.png' height=500 width=600>
