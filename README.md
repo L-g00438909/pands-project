@@ -14,54 +14,50 @@
 ***
 
 
-### Objective: 
 
-The objective of this project is to analyse the Fishers Iris dataset using Python. Python libraries such as Pandas, Numpy, Matplotlib, Seaborn are used to explore the data, generate descriptive statistics and create data visualisations to demonstrate trends and relationships within the dataset. 
+## Objective: 
 
-### Method: 
-
-1.  **Import Libraries:**
-
- -   Pandas: 
- -   Numpy:
--   Matplotlib:
--   Seaborn:
-2.  **Load the dataset:**
-
--    The dataset was loaded from the URL obtained on the seaborn website into a dataFrame created by Pandas. 
-
-3.  **Exploratory Data Analysis:**
--   Look at information about the dataset. 
-
-4.  **Data Cleaning:**
--   Check the dataset for any missing values. 
-
-5.  **Descriptive Statistics:**
--   Summarise the data
-
-6.  **Data Visualisation:**
--   Matplotlib and seaborn used to visualise the data using Histograms, Boxplots, Pairplots, Scatterplots.
-
-7.  **Conclusion:**
--   summary of findings 
+The objective of this project is to analyse the Fishers Iris dataset using Python with Visual Studio Code. 
+ Python libraries such as Pandas, Numpy, Matplotlib, Seaborn are used to explore the data, generate descriptive statistics and create data visualisations to demonstrate trends and relationships within the dataset. 
 
 
 
-### Background:
+***
+## Background:
 
-The Iris dataset is a multivariate dataset consisting of 50 samples from three species of the Iris flower. Iris Setosa, Iris Versicolor and Iris Virginica. The length and width of the sepals and petals of the flowers were measured to assess the variation in Iris flowers of the three related species. 
 
-
-<img src="https://media.licdn.com/dms/image/D4D12AQH-T205O9k22g/article-inline_image-shrink_1000_1488/0/1694100871364?e=2147483647&v=beta&t=D3kWufrXHt34EA9NORP4qMsSOR42BNvA1H4e-UjvE3k" width=500 height=200>
-
-The Iris data set was first used by Ronald A. Fisher in 1936 to demonstrate how linear discriminant analysis can be applied to classify data in different categories (species) based on the measurements of the flower features. 
-Fisher is said to have created the foundations for modern statistical science. 
+The Iris dataset is a multivariate dataset consisting of 50 samples from three species of the Iris flower. Iris Setosa, Iris Versicolor and Iris Virginica. The dataset contains length and width measurements of the sepals and petals of the flowers. The dataset was first used by Ronald A. Fisher in 1936 to demonstrate how linear discriminant analysis can be applied to classify data in different categories (species) based on the measurements of the flower features. Fisher is said to have created the foundations for modern statistical science. 
 
 
 
+<img src="https://media.licdn.com/dms/image/D4D12AQH-T205O9k22g/article-inline_image-shrink_1000_1488/0/1694100871364?e=2147483647&v=beta&t=D3kWufrXHt34EA9NORP4qMsSOR42BNvA1H4e-UjvE3k" width=600 height=300>
 
 
-# Summary Statistics:
+***
+## Method:
+
+###    1. Import libraries:
+
+[Pandas]('https://pandas.pydata.org/docs/user_guide/10min.html') is a python library for data manipulation and analysis built on top of Numpy.It is used for the dataFrame datastructure.A dataframe is a 2D labelled data structure with columns of different data types, similar to a spreadsheet where each column represents a variable and each row represents an observation.
+
+[Numpy]('https://numpy.org/doc/stable/user/whatisnumpy.html') is a powerful library for the numerical computing of Python.
+
+[Matplotlib]('https://www.w3schools.com/python/matplotlib_intro.asp) is a graph plotting library in Python.
+
+[Seaborn]('https://www.w3schools.com/python/numpy/numpy_random_seaborn.asp) is a library that uses Matplotlb underneath to plot graphs. 
+
+###    2. Load the dataset:
+
+The [Iris dataset]('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv') was loaded from the .csv file obtained from the seaborn github repository into a dataFrame using Pandas. 
+
+###    3. Exploratory data analysis:
+
+###    4. Data cleaning: 
+
+The dataset was checked for missing values using df.isnull(). There was no missing values within the dataset. 
+
+
+### 5. Summary Statistics:
 ***
 
 <img src='stats_iris.png' height=300 width=400>
@@ -86,7 +82,7 @@ Petal Width:
 
 
 
-# Data Visualisation:
+### 6. Data Visualisation:
 ***
 Histograms show the distribution of numerical data by grouping data points that lie within a range of values in to a bin. The higher the bar the greater the frequency of values.
 
