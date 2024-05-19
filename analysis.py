@@ -1,6 +1,13 @@
-# Analysis of Iris dataset.
-# 
-# Author: LR
+# analysis.py
+# Date: 19-05-2024
+# Author: Louise Ryan
+
+# Analysis of the Iris dataset using Python libraries: pandas, numpy, matplotlib, seaborn
+# The dataset contains 150 rows and 5 columns. The columns are: sepal_length, sepal_width, petal_length, petal_width, species.
+# The dataset contains 3 species of iris flowers: setosa, versicolor, virginica.
+# The analysis includes: information about the dataset, summary statistics, histograms, boxplots, pairplot, scatterplots, correlation matrix, correlation heatmap.
+# The analysis is saved to text files and images.
+
 
 
 # IMPORT LIBRARIES:
@@ -148,28 +155,60 @@ plt.savefig('pairplot.png')
 plt.close()
  
 
-# Petal length vs Petal width scatterplot with regression line:
-petal_length = df['petal_length'] # petal length
-print(petal_length)
-print(type(petal_length))
-petal_length=df['petal_length'].to_numpy()  # convert petal length to numpy array
-print(petal_length)
-petal_width = df['petal_width'].to_numpy()  # convert petal width to numpy array
-print(petal_width)
+# Sepal length vs Sepal width scatterplot with regression line:
+sepal_length = df['sepal_length']  # sepal length
+print(sepal_length)
+print(type(sepal_length))
+sepal_length = df['sepal_length'].to_numpy()  # convert sepal length to numpy array
+print(sepal_length)
+sepal_width = df['sepal_width'].to_numpy()  # convert sepal width to numpy array
+print(sepal_width)
 
-m, c = np.polyfit(petal_length, petal_width, 1)  # linear regression line
+m, c = np.polyfit(sepal_length, sepal_width, 1)  # linear regression line
 print('\033[1mSlope and Intercept:\033[0m')
 print(m, c)
 
 fig, ax = plt.subplots()
-ax.plot(petal_length, petal_width, 'x')
-ax.plot(petal_length, m*petal_length + c, 'r-')
-ax.set_xlabel('Petal Length (cm)')
-ax.set_ylabel('Petal Width (cm)')
-ax.set_title('Petal Length vs Petal Width')
-plt.text(3, 2, f'y={m:.2f}x+{c:.2f}', color='red', fontsize=10)
-plt.savefig('scatterplot_petal.png')
+ax.plot(sepal_length, sepal_width, 'x')
+ax.plot(sepal_length, m * sepal_length + c, 'r-')
+ax.set_xlabel('Sepal Length (cm)')
+ax.set_ylabel('Sepal Width (cm)')
+ax.set_title('Sepal Length vs Sepal Width')
+plt.text(5, 4, f'y={m:.2f}x+{c:.2f}', color='red', fontsize=10)
+plt.savefig('scatterplot_sepal.png')
 plt.close()
+
+
+
+
+# scatterplot of sepal length vs sepal width per species:
+
+# Rename columns for convenience
+df.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
+
+# Sepal length vs Sepal width scatterplot with regression line:
+sepal_length = df['sepal_length']  # sepal length
+print(sepal_length)
+print(type(sepal_length))
+sepal_length = df['sepal_length'].to_numpy()  # convert sepal length to numpy array
+print(sepal_length)
+sepal_width = df['sepal_width'].to_numpy()  # convert sepal width to numpy array
+print(sepal_width)
+
+m, c = np.polyfit(sepal_length, sepal_width, 1)  # linear regression line
+print('\033[1mSlope and Intercept:\033[0m')
+print(m, c)
+
+fig, ax = plt.subplots()
+ax.plot(sepal_length, sepal_width, 'x')
+ax.plot(sepal_length, m*sepal_length + c, 'r-')
+ax.set_xlabel('Sepal Length (cm)')
+ax.set_ylabel('Sepal Width (cm)')
+ax.set_title('Sepal Length vs Sepal Width')
+plt.text(5, 4, f'y={m:.2f}x+{c:.2f}', color='red', fontsize=10)
+plt.savefig('scatterplot_sepal.png')
+plt.close()
+
 
 
 # scatterplot of petal length vs petal width per species with regression line:
@@ -180,7 +219,13 @@ plt.title('Petal Length vs Petal Width', color='darkblue')
 plt.savefig('scatterplot_petal_species.png')
 plt.close()
 
-
+# scatterplot of sepal length vs sepal width per species with regression line:
+sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
+plt.xlabel('Sepal Length (cm)', color='darkblue')
+plt.ylabel('Sepal Width (cm)', color='darkblue')
+plt.title('Sepal Length vs Sepal Width', color='darkblue')
+plt.savefig('scatterplot_sepal_species.png')
+plt.close()
 
 
 
