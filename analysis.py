@@ -134,6 +134,7 @@ sns.boxplot(data=df, x='species', y='sepal_length', ax=ax[0, 0], hue='species', 
 sns.boxplot(data=df, x='species', y='sepal_width', ax=ax[0, 1], hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
 sns.boxplot(data=df, x='species', y='petal_length', ax=ax[1, 0], hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
 sns.boxplot(data=df, x='species', y='petal_width', ax=ax[1, 1], hue='species', palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
+plt.suptitle('Boxplots of Sepal Length, Sepal Width, Petal Length, Petal Width by Species', color='darkblue', fontsize=15, fontweight='bold')
 plt.savefig('boxplots.png')
 plt.close()
 

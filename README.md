@@ -38,14 +38,14 @@ The Iris dataset is a multivariate dataset consisting of 50 samples from three s
 
 ###    1. Import libraries:
 
-[Pandas]('https://pandas.pydata.org/docs/user_guide/10min.html') is a python library for data manipulation and analysis built on top of Numpy.It is used for the dataFrame datastructure. 
+[Pandas](https://pandas.pydata.org/docs/user_guide/10min.html) is a python library for data manipulation and analysis built on top of Numpy.It is used for the dataFrame datastructure. 
 A dataframe is a 2D labelled data structure with columns of different data types, similar to a spreadsheet where each column represents a variable and each row represents an observation.
 
-[Numpy]('https://numpy.org/doc/stable/user/whatisnumpy.html') is a powerful library for the numerical computing of Python.
+[Numpy](https://numpy.org/doc/stable/user/whatisnumpy.html) is a powerful library for the numerical computing of Python.
 
-[Matplotlib]('https://www.w3schools.com/python/matplotlib_intro.asp') is a graph plotting library in Python.
+[Matplotlib](https://www.w3schools.com/python/matplotlib_intro.asp) is a graph plotting library in Python.
 
-[Seaborn]('https://www.w3schools.com/python/numpy/numpy_random_seaborn.asp') is a library that uses Matplotlb underneath to plot graphs. 
+[Seaborn](https://www.w3schools.com/python/numpy/numpy_random_seaborn.asp) is a library that uses Matplotlb underneath to plot graphs. 
 
 ###    2. Load the dataset:
 
@@ -58,7 +58,7 @@ The summary of the dataset was sent to a text file. Refer to summary_irisdata.tx
 
 ### 4. Summary Statistics:
 ***
-The [describe()]('https://pandas.pydata.org/pandas-docs/version/0.20.2/generated/pandas.DataFrame.describe.html') function in pandas generates descriptive statistics of the dataFrame giving a summary of the central tendency, dispersion and shape of the distribution of the dataset. 
+The [describe()](https://pandas.pydata.org/pandas-docs/version/0.20.2/generated/pandas.DataFrame.describe.html) function in pandas generates descriptive statistics of the dataFrame giving a summary of the central tendency, dispersion and shape of the distribution of the dataset. 
 
 
 
@@ -77,7 +77,7 @@ For sepal length and sepal width the mean and medians are close indicating a mor
 ### 5. Data Visualisation:
 ***
 
-[Histograms]('https://www.w3schools.com/statistics/statistics_histograms.php') show the distribution of numerical data by grouping data points that lie within a range of values in to a bin. The higher the bar the greater the frequency of values.
+[Histograms](https://www.w3schools.com/statistics/statistics_histograms.php) show the distribution of numerical data by grouping data points that lie within a range of values in to a bin. The higher the bar the greater the frequency of values.
 
 
 <p float='left'>
@@ -124,7 +124,7 @@ While petal width had less skewedness and a lower standard deviation than petal 
 ***
 
 
-[Boxplots]('https://www.w3schools.com/statistics/statistics_box_plots.php') show the distribution of data by displaying the minimum and maximum value, the first Quartile (25%: the lower part of the box), third quartile (75%: the upper area of the box), the median (50%: represented by a line inside the box). Boxplots give a visual summary of the data distribution and the presence of skewness/outliers. Outliers can be identified using boxplots or calculations using the Inter-quartile range.
+[Boxplots](https://www.w3schools.com/statistics/statistics_box_plots.php) show the distribution of data by displaying the minimum and maximum value, the first Quartile (25%: the lower part of the box), third quartile (75%: the upper area of the box), the median (50%: represented by a line inside the box). Boxplots give a visual summary of the data distribution and the presence of skewness/outliers. Outliers can be identified using boxplots or calculations using the Inter-quartile range.
 
 <img src='boxplots.png' width=800 height=800>
 
@@ -135,7 +135,7 @@ From the boxplots, outliers can be seen across certain species and features with
 
 ***
 
-A [Pairplot]('https://www.geeksforgeeks.org/python-seaborn-pairplot-method/') is used to see if there is any relationships between two variables. 
+A [Pairplot](https://www.geeksforgeeks.org/python-seaborn-pairplot-method/) is used to see if there is any relationships between two variables. 
 The plots are in a scatterplot matrix grid format where the row name represents the x-axis and column name represents the y-axis. The main diagonal subplots are the histogram distributions for each variable. 
 
 <img src='pairplot.png' height=500 width=600>
@@ -151,22 +151,21 @@ There appears to be a positive linear relationship between petal width and petal
 
 ***
 
-A [Heatmap]('https://seaborn.pydata.org/generated/seaborn.heatmap.html') is used to visualise correlations between variables. 
+A [Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) is used to visualise correlations between variables. 
+[Correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) coefficients indicate the strength and direction of the linear relationship between the variables. Positive correlation indicates that as one variable increases the other variable tends to increase also. 
 
 <img src='correlation_heatmap.png' height=600 width=600>
 
 
 
 
-[Correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) coefficients indicate the strength and direction of the linear relationship between the variables. Positive correlation indicates that as one variable increases the other variable tends to increase also. 
 
 A correlation of 0.96 is seen for petal length vs petal width. This is a near perfect positive correlation that is close to 1 between the variables. The closer a value is to 1 the higher the correlation. This means that as petal length increases petal width increases also. These features are very closely related, by knowing the petal length it would allow you to predict the petal width with a high degree of accuracy. 
-
 In addition, there is a very strong positive correlation between sepal length and petal length at 0.87 which indicates that as the sepal length increases the petal length also tends to increase. Although the relationship is not as strong as between petal length and petal width there is a significant linear relationship between the variables. 
-There is also a strong positive correlation between sepal length and petal width at 0.82 which sugests that there is a significant linear relationship between sepal length and petal width. 
+There is also a strong positive correlation between sepal length and petal width at 0.82 which suggests that there is a significant linear relationship between sepal length and petal width. 
 
 
-Scatterplots are used to identify correlations between two variables.
+[Scatterplots](https://en.wikipedia.org/wiki/Scatter_plot) are used to identify correlations between two variables.
 
 <img src='scatterplot_petal.png' height=500 width=600>
 
@@ -185,12 +184,26 @@ When separated based on species, the blue cluster at the bottom right is confirm
 
 
 
-The analysis shows that Iris Setosa is linearly separable from Iris Versicolor and Iris Virginica with no overlap observed in its petal length and petal width. This clear separation makes it easily distinguishable from Iris Versicolor and Iris Virginica which show more overlap. Iris Setosa also appears to have less overlap in sepal measurements than Iris Virginica and Iris Versicolor which contributes to its sepearation from the other species.  
+The analysis shows that Iris Setosa is linearly separable from Iris Versicolor and Iris Virginica with no overlap observed in its petal length and petal width. This clear separation makes it easily distinguishable from Iris Versicolor and Iris Virginica which show more overlap. Iris Setosa also appears to have less overlap in sepal measurements than Iris Virginica and Iris Versicolor which contributes to its separation from the other species.  
 The high correlation of 0.96 for petal length vs petal width indicates a near perfect linear relationship between these features which suggests that they are closely related and changes in petal length would indicate changes in petal width. The strong linear relationship between these features suggest they could be used in predictive models. In addition, sepal length shows strong correlations with both petal length and petal width suggesting that predictive models using these features may be effective. 
 
+***
+
+### End
 
 #### References:
 
 
-***
-<
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
+
+https://seaborn.pydata.org/
+
+https://www.datacamp.com/cheat-sheet/matplotlib-cheat-sheet-plotting-in-python
+
+https://en.wikipedia.org/wiki/Iris_flower_data_set
+
+https://www.datacamp.com/cheat-sheet/matplotlib-cheat-sheet-plotting-in-python
+
+http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html
+
+https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
