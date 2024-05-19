@@ -13,9 +13,38 @@
 
 ***
 
-### Aim: 
 
-The objective of this project is to analyse the Fishers Iris dataset using Python. Python libraries such as Pandas, Numpy, Matplotlib etc. are used to explore the data  and generate descriptive statistics, data visualisations to demonstrate trends and relationships within the dataset. 
+### Objective: 
+
+The objective of this project is to analyse the Fishers Iris dataset using Python. Python libraries such as Pandas, Numpy, Matplotlib, Seaborn are used to explore the data, generate descriptive statistics and create data visualisations to demonstrate trends and relationships within the dataset. 
+
+### Method: 
+
+1.  **Import Libraries:**
+
+ -   Pandas: 
+ -   Numpy:
+-   Matplotlib:
+-   Seaborn:
+2.  **Load the dataset:**
+
+-    The dataset was loaded from the URL obtained on the seaborn website into a dataFrame created by Pandas. 
+
+3.  **Exploratory Data Analysis:**
+-   Look at information about the dataset. 
+
+4.  **Data Cleaning:**
+-   Check the dataset for any missing values. 
+
+5.  **Descriptive Statistics:**
+-   Summarise the data
+
+6.  **Data Visualisation:**
+-   Matplotlib and seaborn used to visualise the data using Histograms, Boxplots, Pairplots, Scatterplots.
+
+7.  **Conclusion:**
+-   summary of findings 
+
 
 
 ### Background:
