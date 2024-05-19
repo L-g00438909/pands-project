@@ -34,9 +34,11 @@ print(df['species'].value_counts())  # print the number of each species in the d
 print('\033[1mNumber of missing values in the dataset:\033[0m') # check missing values in the dataset.
 print(df.isnull().sum())  # print the number of missing values in each column of the dataset.
 
+
 # check data types of the columns in the dataset:
 print('\033[1mData types of the columns in the dataset:\033[0m')
 print(df.dtypes)  # print the data types of the columns in the dataset.
+print(df.info())  # information about the dataset
 
 
 # SUMMARY STATISTICS:
@@ -153,23 +155,31 @@ sns.pairplot(df, hue='species', palette={'setosa': 'blue', 'versicolor': 'purple
 plt.savefig('pairplot.png')
 plt.close()
  
-# SCATTERPLOTS:
+# SCATTERPLOT:
 
-# scatterplot of sepal length vs sepal width per species with regression line:
-sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'})
-plt.xlabel('Sepal Length (cm)', color='black', fontsize=12, fontweight='bold')
-plt.ylabel('Sepal Width (cm)', color='black', fontsize=12, fontweight='bold')
-plt.title('Sepal Length vs Sepal Width', color='black', fontsize=12, fontweight='bold')
-plt.savefig('scatterplot_sepal.png')
-plt.close()
+# Petal length vs Petal width scatterplot with regression line:
 
-# scatterplot of petal length vs petal width per species with regression line:
-sns.lmplot(x='petal_length', y='petal_width', data=df, hue='species', fit_reg=True, palette={'setosa': 'blue', 'versicolor': 'purple', 'virginica': 'magenta'} )
-plt.xlabel('Petal Length (cm)', fontsize=12, fontweight='bold')
-plt.ylabel('Petal Width (cm)', fontsize=12, fontweight='bold')
-plt.title('Petal Length vs Petal Width', color='black', fontsize=12, fontweight='bold')
+petal_length = df['petal_length'] # petal length
+print(petal_length)
+print(type(petal_length))
+petal_length=df['petal_length'].to_numpy()  # convert petal length to numpy array
+print(petal_length)
+petal_width = df['petal_width'].to_numpy()  # convert petal width to numpy array
+print(petal_width)
+
+m, c = np.polyfit(petal_length, petal_width, 1)  # linear regression line
+print(m, c)
+
+fig, ax = plt.subplots()
+ax.plot(petal_length, petal_width, 'x')
+ax.plot(petal_length, m*petal_length + c, 'r-')
+ax.set_xlabel('Petal Length (cm)')
+ax.set_ylabel('Petal Width (cm)')
+ax.set_title('Petal Length vs Petal Width')
 plt.savefig('scatterplot_petal.png')
 plt.close()
+
+
 
 # CORRELATION:
 
