@@ -162,7 +162,7 @@ A [Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) is used t
 A correlation of 0.96 is seen for petal length vs petal width. This is a near perfect positive correlation that is close to 1 between the variables. The closer a value is to 1 the higher the correlation. This means that as petal length increases petal width increases also. These features are very closely related, by knowing the petal length it would allow you to predict the petal width with a high degree of accuracy. 
 In addition, there is a very strong positive correlation between sepal length and petal length at 0.87 which indicates that as the sepal length increases the petal length also tends to increase. Although the relationship is not as strong as between petal length and petal width there is a significant linear relationship between the variables. 
 There is also a strong positive correlation between sepal length and petal width at 0.82 which suggests that there is a significant linear relationship between sepal length and petal width. 
-For sepal length and sepal width there is a correlation of -0.37 which suggests a weak negative relationship suggesting that these features are not strongly associated. 
+For sepal length and sepal width there is a correlation of -0.12 which suggests a weak negative relationship suggesting that these features are not strongly associated. 
 ***
 
 [Scatterplots](https://en.wikipedia.org/wiki/Scatter_plot) are used to identify correlations between two variables.
@@ -184,7 +184,7 @@ When separated based on species, the blue cluster at the bottom right is confirm
 
 <img src='scatterplot_sepal.png' height=500 width=600>
 
-The scatterplot for sepal length vs sepal width shows a negative linear relationship between the two variables. The correlation coefficient of -0.37 confirms this. The data points are more dispersed in comparison to the scatterplot for petal length vs petal width. Due to the dispersion of the data points it is difficult to determine the species. The negative slope of -0.06 further shows the weak relationship. The changes in sepal width relative to sepal length is minimal. Therefore sepal length is not a strong predictor of sepal width in the dataset. 
+The scatterplot for sepal length vs sepal width shows a negative linear relationship between the two variables. The correlation coefficient of -0.12 confirms this. The data points are more dispersed in comparison to the scatterplot for petal length vs petal width. Due to the dispersion of the data points it is difficult to determine the species. The negative slope of -0.06 further shows the weak relationship. The changes in sepal width relative to sepal length is minimal. Therefore sepal length is not a strong predictor of sepal width in the dataset. 
 
 **Sepal Length vs Sepal Width per species:**
 
